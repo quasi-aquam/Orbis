@@ -1,0 +1,73 @@
+name: MCVictoria
+version: 1.0
+author: MCVictoria Team
+main: org.mcvictoriaTeam.mcvictoria.Main
+description: Test description
+
+commands:
+  f.accept:
+    aliases: [acceptFactionInvite]
+    description: Accept an invite to a faction. Can only join a faction that you have been invited to and aren't already a part of.
+    permission: f.accept
+  f.changeColor:
+    aliases: [changeFactionColor]
+    description: Change the color of a faction. Only callable by leader.
+    permission: f.changeColor
+  f.changeName:
+    aliases: [changeFactionName]
+    description: Change the name of a faction. Only callable by leader.
+    permission: f.changeName
+  f.changePrefix:
+    aliases: [changeFactionPrefix]
+    description: Change the prefix of a faction. Only callable by leader.
+    permission: f.changePrefix
+  f.create:
+    aliases: [createFaction]
+    description: Create a faction.
+    permission: f.create
+  f.demote:
+    aliases: [demoteOfficial]
+    description: Demotes an official to a member. Only callable by leader.
+    permission: f.demote
+  f.disband:
+    aliases: [disbandFaction]
+    description: Disband a faction.
+    permission: f.disband
+  f.kick:
+    aliases: [kickFromFaction]
+    description: Remove a player from your faction. Only callable by leader and officials. Officials cannot kick other officials.
+    permission: f.kick
+  f.invite:
+    aliases: [inviteToFaction]
+    description: Invite a player to your faction. Only callable by leader and officials.
+    permission: f.invite
+  f.leave:
+    aliases: [leaveFaction]
+    description: Leave your current faction. Leader cannot leave. Officals who leave get demoted.
+    permission: f.leave
+  f.promote:
+    aliases: [promoteMember]
+    description: Promotes a member to an official. Only callable by leader.
+    permission: f.promote
+  f.transfer:
+    aliases: [transferLeadership]
+    description: Transfers leadership to a different member of the faction. Only callable by leader.
+    permission: f.transfer
+
+permissions:
+  mcvictoria:
+    description: Gives access to all mcvictoria commands.
+    default: true
+    children:
+      f.accept: true
+      f.changeColor: true
+      f.changeName: true
+      f.changePrefix: true
+      f.create: true
+      f.demote: true
+      f.disband: true
+      f.invite: true
+      f.kick: true
+      f.leave: true
+      f.promote: true
+      f.transfer: true
